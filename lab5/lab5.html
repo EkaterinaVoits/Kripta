@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Лр5</title>
+</head>
+<style type="text/css">
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .container div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .container div *{
+        margin-bottom: 10px;
+    }
+    #output {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    table {
+        margin: 10px;
+    }
+</style>
+<body>
+   
+    <div class="container"> 
+        <div>
+            <h3>Маршрутная перестановка по спирали</h3>
+            <input type="text" id="key" placeholder="Количество строк" value="4">
+            <textarea name="" id="message" rows="3" cols="50">секретное сообщение</textarea>
+            <div>
+                <button onclick="encrypt_routeInSpiral()">Зашифровать</button>
+                <button onclick="decrypt_routeInSpiral()">Расшифровать</button>
+            </div>
+
+
+        </div>
+        <div>
+            <h3>Множественная перестановка</h3>
+            <div id="keysBox">  
+                <h3>Ключи</h3>
+                по столбцам: <input id="firstKey" type="text" value = 'Екатерина'/> 
+                по строкам: <input id="secondKey" type="text" value = 'Войцехович'/>
+            </div>
+            <div id="inputDataBox">
+                <h4>Входное сообщение:</h4> 
+                <textarea id="inputMessage" maxlength="81" rows="3" cols="50">шифр множественной перестановки</textarea> 
+            </div>
+
+            </textarea>
+            <div id="output">
+            </div>
+            <div id="buttonbox">
+                <button id="encryptBtn" onclick="process('encrypt')">Зашифровать</button>
+                <button id="decryptBtn" onclick="process('decrypt')">Расшифровать</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+ <script src="script.js"></script>
+</html>
